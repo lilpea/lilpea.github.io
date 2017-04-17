@@ -1,0 +1,88 @@
+.headercontainer .title {
+    display: block;
+    margin: 0 35vw;
+    width: 30vw;
+    margin-top: 2.96vw;
+    max-width: 410px
+}
+body {
+    background: url("file:///C:/Ekke_asjad/lilpea.github.io/accursedheader/grardient.png") repeat-x #121315;
+    background-size: 1px 16.9785vw
+}
+.house {
+    height: 12vw;
+    max-height: 164px;
+    margin-left: 14vw
+}
+.field {
+    float: right;
+    width: 39.995vw;
+    max-width: 546px;
+    margin-top: 4.2vw;
+    margin-right: 5.65vw
+}
+.madcow {
+    width: 10vw;
+    max-width: 137px;
+    margin-left: 1vw
+}
+.GODFIST {
+    display: none
+}
+.yorp {
+    position: relative;
+    top: 18.228vw;
+    width: 13.177vw;
+    height: 16.9vw
+}
+.headercontainer {
+    position: absolute;
+    top: -17.789vw
+}
+#header .description {
+    color: #999;
+    margin-top: 8vw;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.32vw
+}
+.centeringcentered {
+    width: 44vw;
+    margin: 0 28vw
+}
+@media screen and (min-width: 1366px) {
+    .yorp {
+        top: 240px;
+        width: 180px;
+        height: 231px
+    }
+    .headercontainer {
+        top: -236px
+    }
+    .headercontainer .title {
+        margin: 0 calc(50vw - 205px);
+        margin-top: 40px
+    }
+    body {
+        background-size: 1px auto
+    }
+    .field {
+        margin-top: 49px
+    }
+    #header .description {
+        font-size: 18px;
+        margin-top: 110px
+    }
+    .centeringcentered {
+        width: 600px;
+        margin: 0 calc((100vw - 600px) / 2)
+    }
+}
+@media screen and (max-width: 295px) {
+    .madcow {
+        display: none
+    }
+}
+body {
+    overflow: scroll
+}
