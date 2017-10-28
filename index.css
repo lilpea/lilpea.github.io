@@ -222,12 +222,18 @@ h2 span {
     }
     .game ul {
         width: 100%;
-        top: -200%;
+        top: 0;
+        left: 0;
         height: auto;
         transition: 200ms;
         position: fixed
     }
+    .game:hover ul {
+        background: transparent;
+        top: -100%
+    }
     .game:focus ul {
+        z-index: 10;
         top: 0;
         transition: 200ms
     }

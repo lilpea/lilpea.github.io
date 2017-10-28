@@ -14,7 +14,7 @@ function jsonParse(data) {
                 key_value = Object.values(data.feed.entry[i][key]).toString().replace("N/A", "").replace("No release date set", "");
                 li_value = key_value + "</li>";
                 if (key.toString() === "gsx$game" && key_value !== "") {
-                    temp_template = '<div class="justforthepointer"><div class="game" tabindex="2"><h3>' + key_value + '</h3><ul><div class="fucss">' + temp_template;
+                    temp_template = '<div class="justforthepointer"><div class="game" tabindex="0"><h3>' + key_value + '</h3><ul><div class="fucss">' + temp_template;
                 }
                 if (key.toString() === "gsx$originalreleasedate" && key_value !== "") {
                     time_var = "<li>Created in " + key_value;
