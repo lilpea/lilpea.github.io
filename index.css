@@ -114,7 +114,7 @@ h2 {
     transition: width 200ms, opacity 200ms;
     visibility: hidden;
     border-radius: 1em;
-    min-width: 20em;
+    min-width: 15em;
     padding-right: 0.5em;
     position: absolute;
     height: 0;
