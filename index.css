@@ -216,13 +216,17 @@ h2 span {
     }
     .game ul {
         width: 100%;
-        top: 0;
+        top: -100%;
         height: auto;
+        transition: 200ms;
         position: fixed
+    }
+    .game:hover ul, .game:focus ul {
+        top: 0;
+        transition: 200ms
     }
     .game:hover, .game:focus {
         transform: none;
-        margin-top: 5px
     }
     .fucss {
         background: #111;
@@ -278,7 +282,7 @@ h2 span {
          padding: 0
     }
     h2, .game {
-        margin: 0.75em 0
+        margin: 0.4em 0
     }
     h2 {
         margin-left: 0.5em
