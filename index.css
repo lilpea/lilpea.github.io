@@ -94,12 +94,15 @@ h2 {
 .cssbad {
     flex: 1
 }
-.game {
+.game, .justforthepointer {
     padding: 0.5em 0.25em;
     display: inline-block;
     vertical-align: top;
     transition: padding 200ms;
     transition: 200ms;
+}
+.justforthepointer {
+    padding: 0
 }
 .game:hover, .game:focus {
     transition: 200ms;
@@ -107,19 +110,35 @@ h2 {
     transform: translateX(5px);
 }
 .game:hover h3, .game:focus h3 {
+    color: #eaeaea;
+    background: #000
+}
+.game:focus h3 {
     color: #fff
+}
+.game:focus {
+    pointer-events: none
+}
+.game:focus ul {
+    pointer-events: auto
+}
+.justforthepointer:hover {
+    cursor: pointer
+}
+.game ul {
+    cursor: auto
 }
 .game ul {
     opacity: 0;
     transition: width 200ms, opacity 200ms;
     visibility: hidden;
-    border-radius: 1em;
+    border-radius: 1em 1em 1em 0;
     min-width: 17em;
     padding-right: 0.5em;
     position: absolute;
     height: 0;
     bottom: calc(100% - 10px);
-    left: 0
+    left: 0.25em
 }
 .game:hover ul, .game:focus ul {
     height: auto;
@@ -183,6 +202,9 @@ h2 span {
     font-size: 0.75em;
     height: auto;
     width: auto
+}
+.loading:hover {
+    cursor: progress !important
 }
 @media screen and (max-width: 1099px) {
     .info {
