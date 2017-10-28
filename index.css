@@ -101,12 +101,12 @@ h2 {
     transition: padding 200ms;
     transition: 200ms;
 }
-.game:hover {
+.game:hover, .game:focus {
     transition: 200ms;
     z-index: 5;
     transform: translateX(5px);
 }
-.game:hover h3 {
+.game:hover h3, .game:focus ul {
     color: #fff
 }
 .game ul {
@@ -121,7 +121,7 @@ h2 {
     bottom: calc(100% - 10px);
     left: 0
 }
-.game:hover ul {
+.game:hover ul, .game:focus ul {
     height: auto;
     transition: width 200ms, opacity 200ms;
     visibility: visible;
@@ -198,7 +198,7 @@ h2 span {
         height: auto;
         position: fixed
     }
-    .game:hover {
+    .game:hover, .game:focus {
         transform: none;
         margin-top: 5px
     }

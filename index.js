@@ -85,30 +85,3 @@ function jsonParse(data) {
 
         }
     };
-
-//shamelessly stolen from http://callmenick.com/post/touch-events-instead-of-click-or-hover-with-javascript
-(function(window){
-        // run the forEach on each figure element
-        [].slice.call(document.querySelectorAll("div.game")).forEach(function(el,i){
-            // check if the user moves a finger
-            var fingerMove = false;
-            el.addEventListener("touchmove",function(e){
-                e.stopPropagation();
-                fingerMove = true;
-            });
-
-            // always reset fingerMove to false on touch start
-            el.addEventListener("touchstart",function(e){
-                e.stopPropagation();
-                fingerMove = false;
-            });
-
-            // add hover class if figure touchend and fingerMove is false
-            el.addEventListener("touchend",function(e){
-                e.stopPropagation();
-                if (fingerMove == false) {
-                    classie.toggle(el,"hover");
-                }
-            });
-        });
-})(window);
