@@ -48,10 +48,14 @@ function jsonParse(data) {
                     temp_template = temp_template.replace("yHA", '<li class="nts"> ' + li_value + ' '); 
                 }
                 if (key.toString() === "gsx$homepage" && key_value !== "") {
-                    link_var = "Homepage: <br>" + key_value + " <br>";
+                    link_var = "Homepage: <br>" + key_value;
                 }
                 if (key.toString() === "gsx$resurrectionandoradditionallinks" && key_value !== "") {
-                    link_var = link_var + key_value
+                    if (link_var != "") {
+                        link_var = "<br>" + link_var + key_value;
+                    } else {
+                        link_var = link_var + key_value;
+                    }
                 }
                 if (link_var !== "") {
                     temp_template = temp_template.replace("fJr", '<li class="links"> ' + link_var.replace(" ", " <br> ") + " "); 
