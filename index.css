@@ -242,9 +242,10 @@ h2 span {
         transform: none;
     }
     .fucss {
-        background: #111;
-        padding-left: 2.5em;
-        margin-left: -2.5em
+        padding-left: 2em;
+        margin-left: -3em;
+        position: relative;
+        left: 0.5em
     }
     body {
         position: relative
