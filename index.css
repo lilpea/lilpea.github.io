@@ -226,10 +226,8 @@ h2 span {
         left: 0;
         height: auto;
         transition: 200ms;
-        position: fixed
-    }
-    .game:hover ul {
         visibility: hidden;
+        position: fixed
     }
     .game:focus ul {
         visibility: visible;
