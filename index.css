@@ -1,0 +1,267 @@
+body {
+    font-family: "Helvetica Neue", Helvetica,    Arial,    "Liberation Sans", "Lucida Grande", sans-serif;
+    flex-direction: column;
+    background: #191919;
+    line-height: 1.7em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    color: #ccc;
+    margin: 0
+}
+* {
+    box-sizing: border-box
+}
+a {
+    color: #eee
+}
+.firstpage {
+    background: #252525;
+    background-image: url(rip.svg);
+    background-position: 0% 97.5%;
+    background-repeat: no-repeat;
+    background-size: auto 125%;
+    position: relative;
+    padding-top: 0.5em;
+    max-height: 600px;
+    min-height: auto;
+    height: 100vh
+}
+h1 {
+    line-height: 1.1em;
+    font-size: 3em
+}
+h1, .center {
+    text-align: center;
+    display: block
+}
+.left {
+    display: block;
+    float: left
+}
+.right {
+    display: block;
+    float: right;
+}
+.below {
+    position: absolute;
+    bottom: 1.7em;
+    width: 100%
+}
+.thenumbers {
+    display: inline-block;
+    line-height: 1.7em;
+    text-align: center;
+    font-size: 1.4em;
+    margin: auto;
+}
+.firstpage span {
+    text-shadow: 1px 1px 15px #777
+}
+.nojs {
+    text-align: center;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: -1em;
+    left: 0
+}
+h2 {
+    font-size: 1.35em;
+    border-bottom: solid #999 2px
+}
+.info::first-letter {
+    background: url(info.svg);
+    background-position: 0 0.1em;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    padding-left: 1.5em
+}
+.info {
+    padding-right: 1em
+}
+.footer {
+    line-height: 1.1em;
+    margin-top: 0.5em;
+    background: #000;
+    padding: 0.5em
+}
+.footer p {
+    margin: 0.75em 0
+}
+.cssbad {
+    flex: 1
+}
+.game {
+    padding: 0.5em 0.25em;
+    display: inline-block;
+    vertical-align: top;
+    transition: padding 200ms;
+    transition: 200ms;
+}
+.game:hover {
+    transition: 200ms;
+    z-index: 5;
+    transform: translateX(5px);
+}
+.game:hover h3 {
+    color: #fff
+}
+.game ul {
+    opacity: 0;
+    transition: width 200ms, opacity 200ms;
+    visibility: hidden;
+    border-radius: 1em;
+    min-width: 20em;
+    padding-right: 0.5em;
+    position: absolute;
+    height: 0;
+    bottom: calc(100% - 10px);
+    left: 0
+}
+.game:hover ul {
+    height: auto;
+    transition: width 200ms, opacity 200ms;
+    visibility: visible;
+    display: inline-block;
+    opacity: 1;
+    background: #111;
+    z-index: 5
+}
+ul, h3 {
+    margin: 0
+}
+h2 {
+    position: relative;
+    margin: 0.5em 0 0 0.5em
+}
+h3 {
+    color: #ddd;
+    padding: 0 0.4em
+}
+h3 a {
+    color: inherit
+}
+.centerit {
+    display: inline-block;
+    margin: 0 auto
+}
+.nts {
+    list-style-image: url("pencil.svg")
+}
+.links {
+    list-style-image: url("links.svg");
+    word-wrap: break-word
+}
+h2 span {
+    display: inline-block;
+    height: 2em;
+    width: 2.25em
+}
+.ankhimg {
+    background: url(ankh.svg) no-repeat center;
+    width: 2em
+}
+.riskimg {
+    background: url(risk.svg) no-repeat left bottom;
+    background-size: 80%
+}
+.deadimg {
+    background: url(dead.svg) no-repeat;
+    background-size: 230%
+}
+.gameinfo {
+    padding: 0.5em 10em
+}
+.makeitright {
+    position: absolute;
+    font-weight: 500;
+    bottom: 0;
+    right: 0;
+    font-size: 0.75em;
+    height: auto;
+    width: auto
+}
+@media screen and (max-width: 1099px) {
+    .info {
+        text-align: center;
+        float: none
+    }
+    .gameinfo {
+        padding: 0.5em 1em
+    }
+    .game ul {
+        width: 100%;
+        top: 0;
+        height: auto;
+        position: fixed
+    }
+    .game:hover {
+        transform: none;
+        margin-top: 5px
+    }
+    .fucss {
+        background: #111;
+        padding-left: 2.5em;
+        margin-left: -2.5em
+    }
+    body {
+        position: relative
+    }
+}
+@media screen and (max-width: 799px) {
+    .makeitright {
+        position: static;
+        margin-left: 0.5em
+    }
+}
+@media screen and (max-width: 479px) {
+    .thenumbers span {
+        text-align: center;
+        float: none
+    }
+    .thenumbers {
+        display: inline-block
+    }
+    .below {
+         position: static;
+         padding: 10px
+    }
+    .firstpage {
+         height: auto
+    }
+    .makeitright a {
+        text-align: center;
+    }
+    .makeitright {
+        word-break: keep-all
+    }
+}
+@media screen and (max-width: 625px) {
+    h1 {
+        font-size: 2em
+    }
+    .game ul {
+        min-width: 100%
+    }
+}
+@media screen and (max-width: 400px) {
+    .game {
+        max-width: none;
+        width: 100%
+    }
+    .gameinfo, .game {
+         padding: 0
+    }
+    h2, .game {
+        margin: 0.75em 0
+    }
+    h2 {
+        margin-left: 0.5em
+    }
+    .ankhimg {
+        width: 1.25em
+    }
+}

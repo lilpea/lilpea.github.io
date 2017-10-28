@@ -1,0 +1,37 @@
+﻿pre {
+    white-space: pre-wrap
+}
+body {
+    background: #002b36;
+    color: #93a1a1
+}
+.title {
+    position: absolute;
+}
+.larger {
+    font-size: 1.1em;
+    width: 100%;
+    display: inline-block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    padding: 2px;
+    background: #002b36;
+    z-index: 5;
+}
+.dead, .dead ~ .title {
+    color: #dc322f
+}
+.resurrected,.resurrected ~ .title {
+    color: #b58900
+}
+.risk, .risk ~ .title {
+    color: #cb4b16
+}
+.lowrisk, .lowrisk ~ .title {
+    color: #268bd2
+}
+.safe, .safe ~ .title {
+    color: #859900
+}

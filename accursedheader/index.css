@@ -6,7 +6,7 @@
     max-width: 410px
 }
 body {
-    background: url("grardient.png") repeat-x #121315;
+    background: url("https://lilpea.github.io/accursedheader/grardient.png") repeat-x #121315;
     background-size: 1px 16.9785vw
 }
 .house {
@@ -19,7 +19,7 @@ body {
     width: 39.995vw;
     max-width: 546px;
     margin-top: 4.2vw;
-    margin-right: 5.65vw
+    margin-right: 5.65vw;
 }
 .madcow {
     width: 10vw;
@@ -50,6 +50,12 @@ body {
     width: 44vw;
     margin: 0 28vw
 }
+#page_wrap {
+    margin-top: 7.2474vw !important;
+}
+#main_navi {
+    margin-top: 4.758vw !important
+}
 @media screen and (min-width: 1366px) {
     .yorp {
         top: 240px;
@@ -76,6 +82,12 @@ body {
     .centeringcentered {
         width: 600px;
         margin: 0 calc((100vw - 600px) / 2)
+    }
+    #page_wrap {
+        margin: 99px auto !important
+    }
+    #main_navi {
+        margin-top: 65px !important;
     }
 }
 @media screen and (max-width: 295px) {
