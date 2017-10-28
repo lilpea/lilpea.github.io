@@ -231,7 +231,7 @@ h2 span {
         visibility: visible;
         position: fixed
     }
-    .game:focus ul, .game ul:hover {
+    .game:focus ul, .game ul:hover, .game ul:focus {
         z-index: 10;
         top: 0;
         opacity: 1;
