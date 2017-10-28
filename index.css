@@ -98,8 +98,8 @@ h2 {
     padding: 0.5em 0.25em;
     display: inline-block;
     vertical-align: top;
-    transition: padding 200ms;
     transition: 200ms;
+    outline: none
 }
 .justforthepointer {
     padding: 0
