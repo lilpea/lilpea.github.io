@@ -45,7 +45,7 @@ function jsonParse(data) {
                     }
                 }
                 if (key.toString() === "gsx$notes" && key_value !== "") {
-                    temp_template = temp_template.replace("yHA", '<li class="nts"> ' + li_value + ' '); 
+                    temp_template = temp_template.replace("yHA", '<li class="nts"> ' + key_value + ' </li>'); 
                 }
                 if (key.toString() === "gsx$homepage" && key_value !== "") {
                     link_var = "Homepage: <br>" + key_value;
