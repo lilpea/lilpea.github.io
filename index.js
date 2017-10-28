@@ -14,7 +14,7 @@ function jsonParse(data) {
                 key_value = Object.values(data.feed.entry[i][key]).toString().replace("N/A", "").replace("No release date set", "");
                 li_value = key_value + "</li>";
                 if (key.toString() === "gsx$game" && key_value !== "") {
-                    temp_template = '<div class="game"><a href="#"><h3>' + key_value + '</h3><ul><div class="fucss">' + temp_template;
+                    temp_template = '<div class="game" tabindex="2"><h3>' + key_value + '</h3><ul><div class="fucss">' + temp_template;
                 }
                 if (key.toString() === "gsx$originalreleasedate" && key_value !== "") {
                     time_var = "<li>Created in " + key_value;
@@ -56,7 +56,7 @@ function jsonParse(data) {
                 if (link_var !== "") {
                     temp_template = temp_template.replace("fJr", '<li class="links"> ' + link_var.replace(" ", " <br> ") + " "); 
                 }
-                temp_template = temp_template + "</div></ul></a></div>"
+                temp_template = temp_template + "</div></ul></div>"
             }
             }
         temp_template = temp_template.replace(/lP5|mZA|NhA|yHA|fJr/g, "").replace(/(https?:\/\/.+?)\s/g, '<a href="$1">$1</a>');
