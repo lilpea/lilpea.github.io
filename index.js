@@ -89,7 +89,7 @@ function jsonParse(data) {
 //shamelessly stolen from http://callmenick.com/post/touch-events-instead-of-click-or-hover-with-javascript
 (function(window){
         // run the forEach on each figure element
-        [].slice.call(document.querySelectorAll("figure")).forEach(function(el,i){
+        [].slice.call(document.querySelectorAll("div.game")).forEach(function(el,i){
             // check if the user moves a finger
             var fingerMove = false;
             el.addEventListener("touchmove",function(e){
