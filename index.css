@@ -221,18 +221,21 @@ h2 span {
         padding: 0.5em 1em
     }
     .game ul, .game:hover ul {
+        opacity: 0;
+        pointer-events: none;
         width: 100%;
-        top: 0;
+        top: -100%;
         left: 0;
         height: auto;
         transition: 200ms;
-        visibility: hidden;
+        visibility: visible;
         position: fixed
     }
-    .game:focus ul {
-        visibility: visible;
+    .game:focus ul, .game ul:hover {
         z-index: 10;
         top: 0;
+        opacity: 1;
+        pointer-events: auto;
         transition: 200ms
     }
     .game:hover, .game:focus {
