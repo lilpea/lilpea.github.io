@@ -220,7 +220,7 @@ h2 span {
     .gameinfo {
         padding: 0.5em 1em
     }
-    .game ul {
+    .game ul, .game:hover ul {
         width: 100%;
         top: 0;
         left: 0;
