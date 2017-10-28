@@ -203,7 +203,7 @@ h2 span {
     height: auto;
     width: auto
 }
-.loading:hover {
+.loading {
     cursor: progress !important
 }
 @media screen and (max-width: 1099px) {
