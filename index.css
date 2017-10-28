@@ -106,7 +106,7 @@ h2 {
     z-index: 5;
     transform: translateX(5px);
 }
-.game:hover h3, .game:focus ul {
+.game:hover h3, .game:focus h3 {
     color: #fff
 }
 .game ul {
