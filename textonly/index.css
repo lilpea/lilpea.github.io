@@ -1,6 +1,6 @@
 ﻿pre {
     white-space: pre-wrap;
-    font-family: "Inconsolata", "Monaco", "Source Code Pro", "Consolas", monospace;
+    font-family: "Inconsolata", "Monaco", "SF Mono", "Source Code Pro", "Consolas", monospace;
 }
 body {
     background: #002b36;
