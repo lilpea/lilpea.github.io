@@ -1,9 +1,9 @@
 ﻿pre {
-    white-space: pre-wrap
+    white-space: pre-wrap;
+    font-family: Inconsolata, Consolas, monoscape
 }
 body {
     background: #002b36;
-    font-family: Inconsolata, Consolas, monoscape;
     color: #93a1a1
 }
 .title {
