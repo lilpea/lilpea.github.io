@@ -138,7 +138,9 @@ h2 {
     position: absolute;
     height: 0;
     bottom: calc(100% - 10px);
-    left: 0.25em
+    left: 0.25em;
+    font-size: 0.95em;
+    line-height: 1.6
 }
 .game:hover ul, .game:focus ul {
     height: auto;
@@ -242,6 +244,7 @@ h2 span {
         transform: none;
     }
     .fucss {
+        background: #111;
         padding-left: 2em;
         margin-left: -3em;
         position: relative;

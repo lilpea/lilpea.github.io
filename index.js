@@ -17,22 +17,21 @@ function jsonParse(data) {
                     temp_template = '<div class="justforthepointer"><div class="game" tabindex="0"><h3>' + key_value + '</h3><ul><div class="fucss">' + temp_template;
                 }
                 if (key.toString() === "gsx$originalreleasedate" && key_value !== "") {
-                    time_var = "<li>Created in " + key_value;
-                    orig_var = "1";
+                    orig_var = key_value;
                 }
                 if (key.toString() === "gsx$killedoffdate" && key_value !== "") {
-                    if (orig_var !== "") {
-                        time_var = time_var + ", ✝ " + key_value;
-                    } else {
+                    if (orig_var === "") {
                         time_var = "<li>Created in ???, ✝ " + key_value;
+                    } else {
+                        time_var = "<li>Created in " + orig_var + ", ✝&nbsp;" + key_value.replace(" ", "&nbsp;");
                     }
                 }
                 if (key.toString() === "gsx$dateresurrected" && key_value !== "") {
-                    time_var = time_var + " (Resurrection date: " + key_value + ")";
-                }
-                if (time_var !== "") {
-                    time_var = time_var + "</li>";
-                    temp_template = temp_template.replace("lP5", time_var); 
+                    if (time_var === "") {
+                        time_var = "<li>Created in ??? (Resurrection&nbsp;date: " + key_value.replace(" ", "&nbsp;") + ")";
+                    } else {
+                        time_var = time_var + " (Resurrection&nbsp;date: " + key_value.replace(" ", "&nbsp;") + ")";
+                    }
                 }
                 if (key.toString() === "gsx$publisher" && key_value !== "") {
                     temp_template = temp_template.replace("mZA", "<li>Published by " + li_value); 
@@ -63,6 +62,8 @@ function jsonParse(data) {
                 temp_template = temp_template + "</div></ul></div></div>"
             }
             }
+        time_var = time_var + "</li>";
+        temp_template = temp_template.replace("lP5", time_var); 
         temp_template = temp_template.replace(/lP5|mZA|NhA|yHA|fJr/g, "").replace(/(https?:\/\/.+?)\s/g, '<a href="$1">$1</a>');
         state = Object.values(data.feed.entry[i].gsx$state).toString();
         if (state === "Dead") {
