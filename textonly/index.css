@@ -2,6 +2,9 @@
     white-space: pre-wrap;
     font-family: "Inconsolata", "Monaco", "SF Mono", "Source Code Pro", "Consolas", monospace;
 }
+a {
+    color: #2aa198;
+}
 body {
     background: #002b36;
     color: #93a1a1

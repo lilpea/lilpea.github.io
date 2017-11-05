@@ -17,12 +17,9 @@ function jsonParse(data) {
         var orig_var = "";
         var link_var = "";
         for (var key in data.feed.entry[i]) {
-                key_value = Object.values(data.feed.entry[i][key]).toString().replace("N/A", "").replace("No release date set", "");
+                key_value = Object.keys(data.feed.entry[i][key]).map(function(e){return data.feed.entry[i][key][e]}).toString().replace("N/A", "").replace("No release date set", "");
                 if (key.toString() === "gsx$game" && key_value !== "") {
                     temp_template = '<span class="title">' + key_value + '</span>\n' + temp_template;
-                    if (key_value.startsWith("Counter-")) {
-                        console.log(key_value);
-                    }
                 }
                 if (key.toString() === "gsx$originalreleasedate" && key_value !== "") {
                     time_var = "  Created in " + key_value;
@@ -55,7 +52,6 @@ function jsonParse(data) {
                 if (key.toString() === "gsx$notes" && key_value !== "  \n") {
                     temp_template = temp_template.replace("yHA", key_value); 
                 }
-                key_value = Object.values(data.feed.entry[i][key]).toString().replace("N/A", "").replace("No release date set", "");
                 if (key.toString() === "gsx$homepage" && key_value !== "") {
                     link_var = "Homepage: " + key_value;
                 }
@@ -68,7 +64,7 @@ function jsonParse(data) {
             }
         temp_template = temp_template + "\n\n"
         temp_template = temp_template.replace(/lP5|mZA|NhA|yHA|fJr/g, "")
-        state = Object.values(data.feed.entry[i].gsx$state).toString();
+        state = Object.keys(data.feed.entry[i].gsx$state).map(function(e){return data.feed.entry[i].gsx$state[e]}).toString()
         if (state === "Dead") {
             reg_killed++;
             txt_killed = txt_killed + temp_template;

@@ -11,7 +11,7 @@ function jsonParse(data) {
         var link_var = "";
         for (var key in data.feed.entry[i]) {
             if (data.feed.entry[i].hasOwnProperty(key)) {
-                key_value = Object.values(data.feed.entry[i][key]).toString().replace("N/A", "").replace("No release date set", "");
+                key_value = Object.keys(data.feed.entry[i][key]).map(function(e){return data.feed.entry[i][key][e]}).toString().replace("N/A", "").replace("No release date set", "");
                 li_value = key_value + "</li>";
                 if (key.toString() === "gsx$game" && key_value !== "") {
                     temp_template = '<div class="justforthepointer"><div class="game" tabindex="0"><h3>' + key_value + '</h3><ul><div class="fucss">' + temp_template;
@@ -65,7 +65,7 @@ function jsonParse(data) {
         time_var = time_var + "</li>";
         temp_template = temp_template.replace("lP5", time_var); 
         temp_template = temp_template.replace(/lP5|mZA|NhA|yHA|fJr/g, "").replace(/(https?:\/\/.+?)\s/g, '<a href="$1">$1</a>');
-        state = Object.values(data.feed.entry[i].gsx$state).toString();
+        state = Object.keys(data.feed.entry[i].gsx$state).map(function(e){return data.feed.entry[i].gsx$state[e]}).toString()
         if (state === "Dead") {
             reg_killed++;
             document.getElementsByClassName('dead') [0].innerHTML = document.getElementsByClassName('dead') [0].innerHTML += temp_template;

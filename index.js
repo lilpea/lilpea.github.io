@@ -1,6 +1,93 @@
 ﻿//unminified lilpea.github.io/js.js
-function jsonParse(e){for(var t=0;t<e.feed.entry.length;t++){var a="lP5mZANhAyHAfJr",s="",l="",r=""
-for(var n in e.feed.entry[t])e.feed.entry[t].hasOwnProperty(n)&&(key_value=Object.values(e.feed.entry[t][n]).toString().replace("N/A","").replace("No release date set",""),li_value=key_value+"</li>","gsx$game"===n.toString()&&""!==key_value&&(a='<div class="justforthepointer"><div class="game" tabindex="0"><h3>'+key_value+'</h3><ul><div class="fucss">'+a),"gsx$originalreleasedate"===n.toString()&&""!==key_value&&(l=key_value),"gsx$killedoffdate"===n.toString()&&""!==key_value&&(s=""===l?"<li>Created in ???, ✝ "+key_value:"<li>Created in "+l+", ✝&nbsp;"+key_value.replace(" ","&nbsp;")),"gsx$dateresurrected"===n.toString()&&""!==key_value&&(s=""===s?"<li>Created in ??? (Resurrection&nbsp;date: "+key_value.replace(" ","&nbsp;")+")":s+" (Resurrection&nbsp;date: "+key_value.replace(" ","&nbsp;")+")"),"gsx$publisher"===n.toString()&&""!==key_value&&(a=a.replace("mZA","<li>Published by "+li_value)),"gsx$platforms"===n.toString()&&""!==key_value&&(a=1===key_value.split(",").length?a.replace("NhA","<li>Platform: "+li_value):a.replace("NhA","<li>Platforms: "+li_value)),"gsx$notes"===n.toString()&&""!==key_value&&(a=a.replace("yHA",'<li class="nts"> '+key_value+" </li>")),"gsx$homepage"===n.toString()&&""!==key_value&&(r="Homepage: <br>"+key_value),"gsx$resurrectionandoradditionallinks"===n.toString()&&""!==key_value&&(""!=r?r="<br>"+r+key_value:r+=key_value),""!==r&&(a=a.replace("fJr",'<li class="links"> '+r.replace(" "," <br> ")+" ")),a+="</div></ul></div></div>")
-s+="</li>",a=a.replace("lP5",s),a=a.replace(/lP5|mZA|NhA|yHA|fJr/g,"").replace(/(https?:\/\/.+?)\s/g,'<a href="$1">$1</a>'),state=Object.values(e.feed.entry[t].gsx$state).toString(),"Dead"===state&&(reg_killed++,document.getElementsByClassName("dead")[0].innerHTML=document.getElementsByClassName("dead")[0].innerHTML+=a),"Resurrected"===state&&(reg_killed++,reg_resurrected++,document.getElementsByClassName("rsrctd")[0].innerHTML=document.getElementsByClassName("rsrctd")[0].innerHTML+=a),"At risk"===state&&(reg_atrisk++,document.getElementsByClassName("risk")[0].innerHTML=document.getElementsByClassName("risk")[0].innerHTML+=a),"Low risk"===state&&(reg_lowrisk++,document.getElementsByClassName("lowrisk")[0].innerHTML=document.getElementsByClassName("lowrisk")[0].innerHTML+=a),"Safe"===state&&(document.getElementsByClassName("safe")[0].innerHTML=document.getElementsByClassName("safe")[0].innerHTML+=a),document.getElementsByClassName("thenumbers")[0].innerHTML='<span class="topbunk"><b>'+reg_killed+"</b> games have been killed, of which <b>"+reg_resurrected+'</b> have been resurrected</span><div class="bottombunk"><span class="left"><b>'+reg_atrisk+'</b> games are at risk</span> <span class="right"><b>'+reg_lowrisk+"</b> games are at low risk</span></div>",document.documentElement.innerHTML=document.documentElement.innerHTML.replace(' loading">','">')}}var reg_killed=0,reg_resurrected=0,reg_atrisk=0,reg_lowrisk=0
-!function(){function e(e){clearTimeout(a),s=!0,"not-touch"===l&&(l="",document.documentElement.classList.remove("not-touch")),a=setTimeout(function(){s=!1},500)}function t(e){s||""!==l||(s=!1,l="not-touch",document.documentElement.classList.remove("not-touch"))}var a,s=!1,l="not-touch"
-document.addEventListener("touchstart",e,!1),document.addEventListener("mouseover",t,!1)}()
+var reg_killed      = 0;
+var reg_resurrected = 0;
+var reg_atrisk      = 0;
+var reg_lowrisk     = 0;
+
+function jsonParse(data) {
+    for (var i = 0; i < data.feed.entry.length; i++) {
+        var temp_template = "lP5mZANhAyHAfJr"
+        var time_var = "";
+        var orig_var = "";
+        var link_var = "";
+        for (var key in data.feed.entry[i]) {
+            if (data.feed.entry[i].hasOwnProperty(key)) {
+                key_value = Object.keys(data.feed.entry[i][key]).map(function(e){return data.feed.entry[i][key][e]}).toString().replace("N/A", "").replace("No release date set", "");
+                li_value = key_value + "</li>";
+                if (key.toString() === "gsx$game" && key_value !== "") {
+                    temp_template = '<div class="justforthepointer"><div class="game" tabindex="0"><h3>' + key_value + '</h3><ul><div class="fucss">' + temp_template;
+                }
+                if (key.toString() === "gsx$originalreleasedate" && key_value !== "") {
+                    orig_var = key_value;
+                }
+                if (key.toString() === "gsx$killedoffdate" && key_value !== "") {
+                    if (orig_var === "") {
+                        time_var = "<li>Created in ???, ✝ " + key_value;
+                    } else {
+                        time_var = "<li>Created in " + orig_var + ", ✝&nbsp;" + key_value.replace(" ", "&nbsp;");
+                    }
+                }
+                if (key.toString() === "gsx$dateresurrected" && key_value !== "") {
+                    if (time_var === "") {
+                        time_var = "<li>Created in ??? (Resurrection&nbsp;date: " + key_value.replace(" ", "&nbsp;") + ")";
+                    } else {
+                        time_var = time_var + " (Resurrection&nbsp;date: " + key_value.replace(" ", "&nbsp;") + ")";
+                    }
+                }
+                if (key.toString() === "gsx$publisher" && key_value !== "") {
+                    temp_template = temp_template.replace("mZA", "<li>Published by " + li_value); 
+                }
+                if (key.toString() === "gsx$platforms" && key_value !== "") {
+                    if (key_value.split(",").length === 1) {
+                        temp_template = temp_template.replace("NhA", "<li>Platform: " + li_value);
+                    } else {
+                        temp_template = temp_template.replace("NhA", "<li>Platforms: " + li_value);
+                    }
+                }
+                if (key.toString() === "gsx$notes" && key_value !== "") {
+                    temp_template = temp_template.replace("yHA", '<li class="nts"> ' + key_value + ' </li>'); 
+                }
+                if (key.toString() === "gsx$homepage" && key_value !== "") {
+                    link_var = "Homepage: <br>" + key_value;
+                }
+                if (key.toString() === "gsx$resurrectionandoradditionallinks" && key_value !== "") {
+                    if (link_var != "") {
+                        link_var = "<br>" + link_var + key_value;
+                    } else {
+                        link_var = link_var + key_value;
+                    }
+                }
+                if (link_var !== "") {
+                    temp_template = temp_template.replace("fJr", '<li class="links"> ' + link_var.replace(" ", " <br> ") + " "); 
+                }
+                temp_template = temp_template + "</div></ul></div></div>"
+            }
+            }
+        time_var = time_var + "</li>";
+        temp_template = temp_template.replace("lP5", time_var); 
+        temp_template = temp_template.replace(/lP5|mZA|NhA|yHA|fJr/g, "").replace(/(https?:\/\/.+?)\s/g, '<a href="$1">$1</a>');
+        state = Object.keys(data.feed.entry[i].gsx$state).map(function(e){return data.feed.entry[i].gsx$state[e]}).toString()
+        if (state === "Dead") {
+            reg_killed++;
+            document.getElementsByClassName('dead') [0].innerHTML = document.getElementsByClassName('dead') [0].innerHTML += temp_template;
+        }
+        if (state === "Resurrected") {
+            reg_killed++;
+            reg_resurrected++;
+            document.getElementsByClassName('rsrctd') [0].innerHTML = document.getElementsByClassName('rsrctd') [0].innerHTML += temp_template;
+        }
+        if (state === "At risk") {
+            reg_atrisk++;
+            document.getElementsByClassName('risk') [0].innerHTML = document.getElementsByClassName('risk') [0].innerHTML += temp_template;
+        }
+        if (state === "Low risk") {
+            reg_lowrisk++;
+            document.getElementsByClassName('lowrisk') [0].innerHTML = document.getElementsByClassName('lowrisk') [0].innerHTML += temp_template;
+        }
+        if (state === "Safe") {
+            document.getElementsByClassName('safe') [0].innerHTML = document.getElementsByClassName('safe') [0].innerHTML += temp_template;
+        }
+        document.getElementsByClassName('thenumbers') [0].innerHTML = '<span class="topbunk"><b>' + reg_killed + '</b> games have been killed, of which <b>' + reg_resurrected + '</b> have been resurrected</span><div class="bottombunk"><span class="left"><b>' + reg_atrisk + '</b> games are at risk</span> <span class="right"><b>' + reg_lowrisk + '</b> games are at low risk</span></div>';
+        document.documentElement.innerHTML = document.documentElement.innerHTML.replace(' loading">', '">');
+        }
+    };
