@@ -7,7 +7,7 @@ var txt_resurrected = "";
 var txt_atrisk      = "";
 var txt_lowrisk     = "";
 var txt_safe        = "";
-var text_var        = '<span class="dead title larger">DEAD GAMES:</span>\n=Az\n\n\n<span class="title resurrected"></span><span class="resurrected title larger">RESURRECTED GAMES:</span>\npL=\n\n\n<span class="risk title"></span><span class="risk title larger">GAMES AT RISK:</span>\n=_Z\n\n\n<span class="lowrisk title"></span><span class="lowrisk title larger">GAMES AT LOW RISK:</span>\n=Pz\n\n\n<span class="safe title"></span><span class="safe title larger">SAFE GAMES:</span>\n=_z';
+var text_var        = '<a href="https://lilpea.github.io/">← BACK TO MAIN SITE</a>\n\n<span class="dead title larger">DEAD GAMES:</span>\n=Az\n\n\n<span class="title resurrected"></span><span class="resurrected title larger">RESURRECTED GAMES:</span>\npL=\n\n\n<span class="risk title"></span><span class="risk title larger">GAMES AT RISK:</span>\n=_Z\n\n\n<span class="lowrisk title"></span><span class="lowrisk title larger">GAMES AT LOW RISK:</span>\n=Pz\n\n\n<span class="safe title"></span><span class="safe title larger">SAFE GAMES:</span>\n=_z';
 
 
 function jsonParse(data) {
