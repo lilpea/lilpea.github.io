@@ -52,7 +52,7 @@ function jsonParse(data) {
                     link_var = "Homepage: " + key_value;
                 }
                 key_value = "\n  " + key_value;
-                if (key.toString() === "gsx$notes" && key_value !== "  \n") {
+                if (key.toString() === "gsx$notes" && key_value !== "\n  ") {
                     temp_template = temp_template.replace("yHA", key_value); 
                 }
                 if (key.toString() === "gsx$resurrectionandoradditionallinks" && key_value !== "") {
