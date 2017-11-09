@@ -49,9 +49,9 @@ function jsonParse(data) {
                     }
                 }
                 if (key.toString() === "gsx$homepage" && key_value !== "") {
-                    link_var = "Homepage: " + key_value + "\n";
+                    link_var = "Homepage: " + key_value;
                 }
-                key_value = key_value + "\n";
+                key_value = "\n  " + key_value;
                 if (key.toString() === "gsx$notes" && key_value !== "  \n") {
                     temp_template = temp_template.replace("yHA", key_value); 
                 }
@@ -59,7 +59,7 @@ function jsonParse(data) {
                     link_var = link_var + key_value;
                 }
                 if (link_var !== "") {
-                        temp_template = temp_template.replace("fJr", "  " + link_var); 
+                    temp_template = temp_template.replace("fJr", "  " + link_var); 
                 }
             }
         temp_template = temp_template + "\n\n"
