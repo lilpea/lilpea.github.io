@@ -2,38 +2,30 @@
     display: block;
     margin: 0 35vw;
     width: 30vw;
-    margin-top: 2.96vw;
-    max-width: 410px
+    max-width: 410px;
+    position: relative;
+    top: 3.5vw;
 }
 body {
-    background: url("https://lilpea.github.io/accursedheader/grardient.png") repeat-x #121315;
-    background-size: 1px 16.9785vw
+background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADnCAYAAADfCDwWAAAABmJLR0QAXwAqACxEAkywAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QEPDxwkpeel0AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAA/ElEQVQ4y22TQXLAMAgDV0zPnf7/VX1H+4eqBxsMTi4Z4pi1JBM+P78cBoL2MIFNgAg714wJzX02NIDsfK02VB1/WVkmsIqXbVqVdkVDsVVZ2h0iqzgyxBCpBKhBNc2IkCEcaWGt1b7l7bjUEx8cb8mTTNiqDj2khZ88KQqQbTvJBAh2TFFJrl7TE9edFcM0c/Olj6eCRamIDxSNM0AZSSV0qWdG0nMZSlvs9fUEpkYe+tadX6h2ZF5yn5cXyq1PaVXqZxzeW7rX5HT8CPEKrKvXHJA5dXrOVZOhMeNr6tacjju/LiVeePuHGBaCy4dfhLtiyt/0I0R8//zyD3IPVDM1bdkEAAAAAElFTkSuQmCC") repeat-x #121315;
+    background-size: 1px 16.9785vw;
+background-position-y: -5.1vw;
 }
 .house {
-    height: 12vw;
-    max-height: 164px;
-    margin-left: 14vw
+    height: 10.1vw;
+    max-height: 140px;
+    margin-left: 12vw;
 }
 .field {
     float: right;
-    width: 39.995vw;
-    max-width: 546px;
-    margin-top: 4.2vw;
+    width: 33.6vw;
+    max-width: 459px;
+    margin-top: 3.5vw;
     margin-right: 5.65vw;
-}
-.madcow {
-    width: 10vw;
-    max-width: 137px;
-    margin-left: 1vw
-}
-.GODFIST {
-    display: none
 }
 .yorp {
     position: relative;
-    top: 18.228vw;
-    width: 13.177vw;
-    height: 16.9vw
+    height: 16.9vw;
 }
 .headercontainer {
     position: absolute;
@@ -41,7 +33,7 @@ body {
 }
 #header .description {
     color: #999;
-    margin-top: 8vw;
+    margin-top: 6.5vw;
     text-align: center;
     font-weight: 700;
     font-size: 1.32vw
@@ -58,26 +50,25 @@ body {
 }
 @media screen and (min-width: 1366px) {
     .yorp {
-        top: 240px;
-        width: 180px;
-        height: 231px
+        height: 227px;
     }
     .headercontainer {
         top: -236px
     }
     .headercontainer .title {
         margin: 0 calc(50vw - 205px);
-        margin-top: 40px
+        top: 48px;
     }
     body {
-        background-size: 1px auto
+        background-size: 1px auto;
+        background-position-y: -66px;
     }
     .field {
         margin-top: 49px
     }
     #header .description {
         font-size: 18px;
-        margin-top: 110px
+        margin-top: 89px;
     }
     .centeringcentered {
         width: 600px;
@@ -89,12 +80,24 @@ body {
     #main_navi {
         margin-top: 65px !important;
     }
-}
-@media screen and (max-width: 295px) {
-    .madcow {
-        display: none
+    .title {
+        top: 20px
     }
 }
-body {
-    overflow: scroll
+@media screen and (max-width: 650px) {
+    #header .description {
+        font-size: 1.69vw
+    }
+    .headercontainer .title {
+        width: 35vw;
+        margin: 0 32.5vw
+    }
+}
+@media screen and (max-width: 360px) {
+    .description {
+        display: none
+    }
+    .headercontainer .title {
+        top: 5vw
+    }
 }
