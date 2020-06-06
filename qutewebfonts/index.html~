@@ -7,14 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-# qutebrowser fonts test
-
-**Bold text**
-
-_Italic text_
-
-_**Bold and italic text**_
-
-This should render in Fira Sans, which is included as a webfont. Barring that, it will use Arial, Liberation Sans, or the default sans-serif font.
+    <h1 id="qutebrowser-fonts-test">qutebrowser fonts test</h1>
+    <p><strong>Bold text</strong></p>
+    <p><em>Italic text</em></p>
+    <p><em><strong>Bold and italic text</strong></em></p>
+    <p>This should render in Fira Sans, which is included as a webfont. Barring that, it will use Arial, Liberation Sans, or the default sans-serif font.</p>
 </body>
 </html>
