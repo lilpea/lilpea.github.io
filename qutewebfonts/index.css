@@ -2,7 +2,6 @@
   font-family: "Fira Sans";
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
   src: local("Fira Sans Italic"), local("FiraSans-Italic"),
     url("https://lilpea.github.io/qutewebfonts/FiraSans-Italic.woff2")
       format("woff2"),
@@ -16,7 +15,6 @@
   font-family: "Fira Sans";
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
   src: local("Fira Sans Italic"), local("FiraSans-Italic"),
     url("https://lilpea.github.io/qutewebfonts/FiraSans-Italic-ext.woff2")
       format("woff2");
@@ -27,7 +25,6 @@
   font-family: "Fira Sans";
   font-style: italic;
   font-weight: 700;
-  font-display: swap;
   src: local("Fira Sans Bold Italic"), local("FiraSans-BoldItalic"),
     url("https://lilpea.github.io/qutewebfonts/FiraSans-BoldItalic.woff2")
       format("woff2");
@@ -39,7 +36,6 @@
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
   src: local("Fira Sans Bold"), local("FiraSans-Bold"),
     url(https://lilpea.github.io/qutewebfonts/FiraSans-Bold.woff2)
       format("woff2"),
@@ -53,7 +49,6 @@
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
   src: local('Fira Sans Bold'), local('FiraSans-Bold'), url(https://lilpea.github.io/qutewebfonts/FiraSans-Bold-ext.woff2') format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
     U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
@@ -62,7 +57,6 @@
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: local("Fira Sans Regular"), local("FiraSans-Regular"),
     url(https://lilpea.github.io/qutewebfonts/FiraSans-Regular-ext.woff2)
       format("woff2"),
@@ -76,7 +70,6 @@
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: local("Fira Sans Regular"), local("FiraSans-Regular"),
     url(https://lilpea.github.io/qutewebfonts/FiraSans-Regular.woff2)
       format("woff2");
