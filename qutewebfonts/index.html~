@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>qutebrowser fonts test</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+# qutebrowser fonts test
+
+**Bold text**
+
+_Italic text_
+
+_**Bold and italic text**_
+
+This should render in Fira Sans, which is included as a webfont. Barring that, it will use Arial, Liberation Sans, or the default sans-serif font.
+</body>
+</html>
