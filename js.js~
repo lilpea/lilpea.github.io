@@ -26,7 +26,7 @@ function jsonParse(data) {
                         time_var = "<li>Created in " + orig_var + ", ✝&nbsp;" + key_value.replace(" ", "&nbsp;");
                     }
                 }
-                if (key.toString() === "gsx$resurrectionandoradditionallinks" && key_value !== "") {
+                if (key.toString() === "gsx$ressurectionandoradditionallinks" && key_value !== "") {
                     if (time_var === "") {
                         time_var = "<li>Created in ??? (Resurrection&nbsp;date: " + key_value.replace(" ", "&nbsp;") + ")";
                     } else {

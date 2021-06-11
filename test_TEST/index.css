@@ -1,0 +1,379 @@
+body {
+    font-family: "Helvetica Neue", Helvetica,    Arial,    "Liberation Sans", "Lucida Grande", sans-serif;
+    flex-direction: column;
+    background: #191919;
+    line-height: 1.7em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    color: #ccc;
+    margin: 0
+}
+* {
+    box-sizing: border-box
+}
+a {
+    color: #eee
+}
+.firstpage {
+    background: #252525;
+    background-image: url(https://lilpea.github.io/rip.svg);
+    background-position: 0% 97.5%;
+    background-repeat: no-repeat;
+    background-size: auto 125%;
+    position: relative;
+    padding-top: 0.5em;
+    max-height: 600px;
+    min-height: auto;
+    height: 40vh
+}
+h1 {
+    line-height: 1.1em;
+    font-size: 3em
+}
+h1, .center {
+    text-align: center;
+    display: block
+}
+.left {
+    display: block;
+    float: left
+}
+.right {
+    display: block;
+    float: right;
+}
+.below {
+    position: absolute;
+    bottom: 1.7em;
+    width: 100%
+}
+.thenumbers {
+    display: inline-block;
+    line-height: 1.7em;
+    text-align: center;
+    font-size: 1.4em;
+    margin: auto;
+}
+.firstpage span {
+    text-shadow: 1px 1px 15px #777
+}
+.nojs {
+    text-align: center;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: -1em;
+    left: 0
+}
+h2 {
+    font-size: 1.35em;
+    border-bottom: solid #999 2px
+}
+.info::first-letter {
+    background: url(https://lilpea.github.io/info.svg);
+    background-position: 0 0.1em;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    padding-left: 1.5em
+}
+.info {
+    padding-right: 1em
+}
+.footer {
+    line-height: 1.1em;
+    margin-top: 0.5em;
+    background: #000;
+    padding: 0.5em
+}
+.footer p {
+    margin: 0.75em 0
+}
+.cssbad {
+    flex: 1
+}
+.game, .justforthepointer {
+    padding: 0.5em 0.25em;
+    display: inline-block;
+    vertical-align: top;
+    transition: 100ms;
+    outline: none
+}
+.justforthepointer {
+    padding: 0
+}
+.not-touch .game:hover, .game:focus {
+    z-index: 5;
+    transform: translateX(5px);
+}
+.not-touch .game:hover h3, .game:focus h3 {
+    transition: 100ms;
+    color: #eaeaea;
+    background: #000
+}
+.game:focus h3 {
+    color: #fff
+}
+.game:focus {
+    pointer-events: none
+}
+.game:focus ul {
+    pointer-events: auto
+}
+.not-touch .justforthepointer:hover {
+    cursor: pointer
+}
+.game ul {
+    cursor: auto
+}
+.game ul {
+    opacity: 0;
+    transition: width 200ms, opacity 200ms;
+    visibility: hidden;
+    border-radius: 1em 1em 1em 0;
+    min-width: 17em;
+    padding-right: 0.5em;
+    position: absolute;
+    height: 0;
+    bottom: calc(100% - 10px);
+    left: 0.25em;
+    font-size: 0.95em;
+    line-height: 1.6
+}
+.game:hover ul, .game:focus ul {
+    height: auto;
+    transition: width 200ms, opacity 200ms;
+    visibility: visible;
+    display: inline-block;
+    opacity: 1;
+    background: #111;
+    z-index: 5
+}
+ul, h3 {
+    margin: 0
+}
+h2 {
+    position: relative;
+    margin: 0.5em 0 0 0.5em
+}
+h3 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #ddd;
+    padding: 0 0.4em
+}
+h3 a {
+    color: inherit
+}
+.centerit {
+    display: inline-block;
+    margin: 0 auto
+}
+.nts {
+    list-style-image: url(https://lilpea.github.io/pencil.svg)
+}
+.links {
+    list-style-image: url(https://lilpea.github.io/links.svg);
+    word-wrap: break-word
+}
+h2 span {
+    display: inline-block;
+    height: 2em;
+    width: 2.25em
+}
+.ankhimg {
+    background: url(https://lilpea.github.io/ankh.svg) no-repeat center;
+    width: 2em
+}
+.riskimg {
+    background: url(https://lilpea.github.io/risk.svg) no-repeat left bottom;
+    background-size: 80%
+}
+.deadimg {
+    background: url(https://lilpea.github.io/dead.svg) no-repeat;
+    background-size: 230%
+}
+.gameinfo {
+    padding: 0.5em 10em
+}
+.makeitright {
+    position: absolute;
+    font-weight: 500;
+    bottom: 0;
+    right: 0;
+    font-size: 0.75em;
+    height: auto;
+    width: auto
+}
+.loading {
+    cursor: progress !important
+}
+@media screen and (max-width: 1099px) {
+    .info {
+        text-align: center;
+        float: none
+    }
+    .gameinfo {
+        padding: 0.5em 1em
+    }
+    .game ul, .game:hover ul {
+        opacity: 0;
+        pointer-events: none;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        height: auto;
+        transition: 200ms;
+        visibility: visible;
+        position: fixed
+    }
+    .game:focus ul, .not-touch .game ul:hover {
+        z-index: 10;
+        top: 0;
+        opacity: 1;
+        pointer-events: auto;
+        transition: 200ms
+    }
+    .not-touch .game:hover, .game:focus {
+        transform: none;
+    }
+    .fucss {
+        background: #111;
+        padding-left: 2em;
+        margin-left: -3em;
+        position: relative;
+        left: 0.5em
+    }
+    body {
+        position: relative
+    }
+}
+@media screen and (max-width: 799px) {
+    .makeitright {
+        position: static;
+        margin-left: 0.5em
+    }
+}
+@media screen and (max-width: 479px) {
+    .thenumbers span {
+        text-align: center;
+        float: none
+    }
+    .thenumbers {
+        display: inline-block
+    }
+    .below {
+         position: static;
+         padding: 10px
+    }
+    .firstpage {
+         height: auto
+    }
+    .makeitright a {
+        text-align: center;
+    }
+    .makeitright {
+        word-break: keep-all
+    }
+}
+@media screen and (max-width: 625px) {
+    h1 {
+        font-size: 2em
+    }
+    .game ul {
+        min-width: 100%
+    }
+}
+@media screen and (max-width: 400px) {
+    .game {
+        max-width: none;
+        width: 100%
+    }
+    .gameinfo, .game {
+         padding: 0
+    }
+    h2, .game {
+        margin: 0.4em 0
+    }
+    h2 {
+        margin-left: 0.5em
+    }
+    .ankhimg {
+        width: 1.25em
+    }
+}
+.ytd-grid-renderer {
+    margin-left: 10px;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    color: #fff;
+    margin-top: 0.5em
+}
+
+h4 {
+    font-size: .8em;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0
+}
+
+body {
+    font-family: "Helvetica Neue",sans-serif;
+    background: #121315;
+    overflow: hidden
+}
+
+ytd-badge-supported-renderer.ytd-grid-video-renderer {
+    margin-right: 8px
+}
+
+#metadata-container {
+    visibility: hidden;
+    height: 0
+}
+
+#overlays,.ytd-grid-video-renderer[hidden],[hidden],ytd-badge-supported-renderer,ytd-thumbnail-overlay-toggle-button-renderer[aria-label="Watch later"] {
+    display: none
+}
+
+#details.ytd-grid-video-renderer {
+    padding: 3px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column
+}
+
+ytd-thumbnail.ytd-grid-video-renderer {
+    height: var(--ytd-grid-thumbnail_-_height);
+    width: 210px
+}
+
+ytd-thumbnail {
+    display: inline-block;
+    position: relative;
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none
+}
+
+#items.ytd-grid-renderer>ytd-grid-channel-renderer.ytd-grid-renderer,#items.ytd-grid-renderer>ytd-grid-movie-playlist-renderer.ytd-grid-renderer,#items.ytd-grid-renderer>ytd-grid-movie-renderer.ytd-grid-renderer,#items.ytd-grid-renderer>ytd-grid-playlist-renderer.ytd-grid-renderer,#items.ytd-grid-renderer>ytd-grid-show-renderer.ytd-grid-renderer,#items.ytd-grid-renderer>ytd-grid-video-renderer.ytd-grid-renderer {
+    margin-right: 4px;
+    display: inline-block;
+    width: 210px;
+    margin-bottom: 8px
+}
+

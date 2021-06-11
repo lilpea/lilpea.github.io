@@ -1,0 +1,37 @@
+﻿<input class="radio" id="month" name="donate" value="choice" type="radio">
+<label for="month">Monthly Donation</label>
+<input class="radio" id="oncer" name="donate" value="choice" type="radio">
+<label for="oncer">One-time Donation</label>
+<div class="monthly">
+    <form class="dntplgn_donate_monthly" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input name="cmd" value="_xclick-subscriptions" type="hidden">
+    <input name="business" value="rosswscott@gmail.com" type="hidden">
+    <input name="lc" value="US" type="hidden">
+    <input name="item_name" value="Accursed Farms Donation" type="hidden">
+    <input name="no_note" value="1" type="hidden">
+    <input name="src" value="1" type="hidden">
+    <input name="p3" value="1" type="hidden">
+    <input name="t3" value="M" type="hidden">
+    <input name="currency_code" value="USD" type="hidden">
+    <input name="bn" value="TipsandTricks_SP" type="hidden">
+    <input name="on0" value="Donate" type="hidden">
+    <input name="os0" value="Monthly" type="hidden">
+    <input class="aeiou" id="dntplgn_monthly_other_sum" name="a3" value="" type="text">
+    <input class="dntplgn_submit_button" name="submit" value="Donate" alt="PayPal - The safer, easier way to pay online!" type="submit">
+    <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0">
+    </form>
+</div>
+<div class="once">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input name="cmd" value="_donations" type="hidden">
+    <input name="business" value="rosswscott@gmail.com" type="hidden">
+    <input name="lc" value="US" type="hidden">
+    <input class="aeiou" id="dntplgn_once_amount" name="amount" value="" type="text">
+    <input name="currency_code" value="USD" type="hidden">
+    <input name="no_note" value="0" type="hidden">
+    <input name="bn" value="TipsandTricks_SP" type="hidden">
+    <input class="dntplgn_submit_button" name="submit" value="Donate" alt="PayPal - The safer, easier way to pay online!" type="submit">
+    <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0">
+    </form>
+</div>
+<script>var $inputs = $(".aeiou");  $inputs.keyup(function () { $inputs.val($(this).val()); });</script>
